@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FIRE ACADEMY × ASMA STORE</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:linear-gradient(145deg,#111,#260b0b,#111);
+ color:white;
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ padding:25px 15px;
+}
+.container{
+ width:100%;max-width:430px;text-align:center;
+}
+.logo{
+ font-size:29px;font-weight:bold;
+ color:#ff4b25;margin:25px 0 10px;
+}
+.subtitle{color:#ccc;margin-bottom:28px}
+.section{
+ background:#211b1b;border:1px solid #49302b;
+ border-radius:15px;padding:14px;margin:13px 0;
+}
+a,.pay button{
+ display:block;width:100%;padding:15px;
+ margin:10px 0;border:0;border-radius:10px;
+ background:#302626;color:white;
+ text-decoration:none;font-size:16px;
+ cursor:pointer;
+}
+a:hover,.pay button:hover{background:#49302b}
+.pay button{background:#a62b1c}
+h3{color:#ff704c;margin:5px}
+.note{font-size:12px;color:#aaa;margin-top:25px}
+</style>
+</head>
+<body>
+<div class="container">
+ <div class="logo">FIRE ACADEMY</div>
+ <h2>× ASMA STORE</h2>
+ <p class="subtitle">كل روابطنا وطرق التواصل والدفع في مكان واحد</p>
+
+ <div class="section">
+  <h3>تابعنا</h3>
+  <a href="https://www.facebook.com/share/191SJTw1yF/" target="_blank">Facebook - Fire Academy</a>
+  <a href="https://www.facebook.com/share/191cvN7qyo/" target="_blank">Facebook - ASMA STORE</a>
+  <a href="https://www.tiktok.com/@fire.academy17?_r=1&_t=ZS-9AxjbzdMXi8" target="_blank">TikTok</a>
+  <a href="https://wa.me/201093888226" target="_blank">WhatsApp - تواصل معنا</a>
+ </div>
+
+ <div class="section pay">
+  <h3>طرق الدفع</h3>
+  <button onclick="copyText('01055895163','فودافون كاش')">
+   Vodafone Cash - 01055895163
+  </button>
+  <button onclick="copyText('01063468080','InstaPay')">
+   InstaPay - 01063468080
+  </button>
+  <p class="note">اضغط على الرقم لنسخه واستخدمه في تطبيق الدفع</p>
+ </div>
+
+ <p class="note">FIRE ACADEMY × ASMA STORE</p>
+</div>
+<script>
+function copyText(number,name){
+ if(navigator.clipboard && window.isSecureContext){
+  navigator.clipboard.writeText(number).then(
+   ()=>alert('تم نسخ رقم '+name),
+   ()=>alert('رقم '+name+': '+number)
+  );
+ }else{
+  alert('رقم '+name+': '+number);
+ }
+}
+</script>
+</body>
+</html>
